@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Log-In</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="author" content="Jhet Andrei Dizon">
+        <link rel="icon" type="image/jpg" href="Logo/logo.png" />
+        <meta name="keywords" content="dobu, martialarts, gym">
+        <meta name="description" content="Log in page of the website">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sarpanch:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="Styles/general.css">
+        <link rel="stylesheet" href="Styles/header.css">
+        <link rel="stylesheet" href="Styles/center.css">
+
+    </head>
+    <body>
+        <div class="header">
+            <div class="header-left-section">
+                <a href="index.html">
+                    <img class=logo src="Logo/Logo-text.png">
+                </a>    
+            </div>
+            <nav class="header-middle-section">
+                <div class="middle-grid">
+                    <a href="index.html">
+                        <button class="home-button">
+                            Home
+                        </button>
+                    </a>
+                    <a href="classes.html">
+                        <button class="classes-button">
+                            Classes
+                        </button>
+                    </a>
+                    <a href="instructors.html">
+                        <button class="instructor-button">
+                            Instructors
+                        </button>
+                    </a>
+                </div>
+            </nav>
+           
+            <nav class="header-right-section">
+                <div class="right-grid">
+                    <div class="divider"></div>
+                    <a href="courses.html">
+                        <button class="courses-button">
+                            Courses
+                        </button>
+                    </a>
+                    <a href="login.html">
+                        <button class="log-in-button">
+                            Log-In
+                        </button>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="login-center">
+            <div class="login-center-container">
+                <div class="login-left-section">
+                    <div class="login-quote">
+                        <p class="login-quote-content">
+                            ¨The only person you are destined to become is the person you decide to be.¨ &#45; Ralph Waldo Emerson
+                        </p>
+                    </div>
+                    <img class="login-image" src="Images/photo.jpg">
+                </div>
+
+                <div class="login-right-section">
+                    <div class="login-text-top">
+                        <h>
+                            You have returned, Champion
+                        </h>
+                    </div>
+                    
+                    <div class="login-username">
+                        <p>
+                            Enter Username
+                        </p>
+                    </div>
+                    <div class="login-username-input">
+                        <input id="username-input" class="login-username-input-content" type="text" placeholder="Username" required>
+                    </div>
+                    <div class="login-password">
+                        <p>
+                            Enter Password
+                        </p>
+                    </div>
+                    <div class="login-password-input">
+                        <input id="password-input" class="login-password-input-content" type="password" placeholder="Password" required>
+                    </div>
+                    <div class="log-in-input">
+                        <a href="index.html" onclick="return validateInput()">
+                            <button class="log-in-input-button">
+                                Log-In
+                            </button>
+                        </a>
+                    </div>
+
+                    <script>
+                        function validateInput() {
+                            var username = document.getElementById("username-input").value;
+                            var password = document.getElementById("password-input").value;
+                    
+                            if (username.trim() === "" || password.trim() === "") {
+                                alert("Please do not leave the fields blank.");
+                                return false;
+                            }
+                    
+                            return true;
+                        }
+                    </script>
+
+                    <div>
+                        <p class="login-bottom-text">
+                            Don&#39;t have an account?
+                            <a href="signup.html">
+                                <button class="login-signup-button">
+                                    <u>Sign up.</u>
+                                </button>
+                            </a>
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+           
+        
+    </body>
+</html>

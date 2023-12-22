@@ -1,0 +1,211 @@
+@media screen and (max-width: 768px) {
+    .header {
+        min-height: 100px;
+    }
+
+    .header-middle-section {
+        margin-right: 40px;
+    }
+
+    .home-button,
+    .classes-button,
+    .instructor-button {
+        font-size: 20px;
+    }
+
+    .courses-button,
+    .log-in-button {
+        height: 40px;
+        font-size: 20px;
+    }
+
+}
+
+.header {
+    height: 60px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 30.01px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000000000;
+
+    background-color: rgb(14, 14, 14);
+    min-width: 1060px;
+    
+}
+
+.header-left-section {
+    display: flex;
+    align-items: center;
+  }
+
+.logo {
+    height: 180px;
+    margin-left: 35.002px;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.header-middle-section {
+    display: flex;
+    flex: 1;
+    padding-bottom: 10px;
+    align-items: center;
+    padding-top: 7px;
+    justify-content: right;
+    padding-right: 15px;
+}
+
+.middle-grid {
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    justify-content: right;
+    flex-shrink: 1;
+    margin-right: 10px;
+    height: 100%;
+    align-items: center;
+}
+
+.home-button,
+.classes-button,
+.instructor-button {
+    background: none;
+    color: white;
+    border: none;
+    position: relative; 
+    width: 100px;
+ 
+}
+
+.home-button::after,
+.classes-button::after,
+.instructor-button::after {
+    content: ''; 
+    position: absolute;
+    bottom: -3px; 
+    left: 0;
+    height: 2px; 
+    width: 0; 
+    background:  red; 
+    transition: width 0.3s, color 0.3s; 
+}
+
+.home-button:hover::after,
+.classes-button:hover::after,
+.instructor-button:hover::after {
+    width: 100%; 
+    color: rgb(149, 0, 0); 
+    transition: width 0.3s, color 0.3s; 
+}
+
+.home-button:hover,
+.classes-button:hover,
+.instructor-button:hover {
+    color: rgb(149 0 0);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.header-right-section {
+    display: flex;
+    align-items: center;   
+}
+
+.right-grid {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+    margin-right: 35.002px;
+}
+
+.divider {
+    background-color: white;
+    height: 30px;
+    width: 4px;
+}
+
+.courses-button {
+    background: none;
+    color: white;
+    border-color: white;
+    border-radius: 0.156vw;
+    
+    width: 120px;
+    position: relative; 
+    overflow: hidden; 
+}
+
+.courses-button::before {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: white;
+    z-index: -1;
+    transition: right 0.14s; 
+}
+
+.courses-button:hover::before {
+    right: 0; 
+    transition: right 0.14s; 
+}
+
+.courses-button:hover {
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+    transform: translateY(-5%);
+    transition: 0.14s;
+    text-transform: uppercase;
+}   
+
+.log-in-button {
+    background-image: linear-gradient(to right, rgb(149 0 0), rgb(26 0 0));
+    border: none;
+    color: white;
+    border-radius: 0.156vw;
+    width: 120px;
+    position: relative;
+    overflow: hidden;
+}
+
+.log-in-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, red, black);
+    z-index: -1;
+    transition: left 0.14s;
+}
+
+.log-in-button:hover::before {
+    left: 0;
+    transition: left 0.14s;
+}
+
+.log-in-button:hover {
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transform: translateY(-3%);
+    border: 2px solid white;
+    text-transform: uppercase;
+    transition: 0.14s;
+}
